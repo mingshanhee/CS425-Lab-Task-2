@@ -22,7 +22,7 @@ def main(datasetName, use_word_embeddings):
 	
 	# Loading Dataset
 	try:
-		datasetFile = open(datasetName,"r")
+		datasetFile = open(datasetName,"r", encoding="utf-8")
 	except FileNotFoundError:
 		print("Bot> Oops! I am unable to locate \"" + datasetName + "\"")
 		exit()

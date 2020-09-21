@@ -17,7 +17,7 @@ def loadData(filepath):
     # Retrieving paragraphs : Assumption is that each paragraph in dataset is
     # separated by new line character
     paragraphs = []
-    with open(filepath) as f:
+    with open(filepath, encoding="utf-8") as f:
         for para in f.readlines():
             if(len(para.strip()) > 0):
                 paragraphs.append(para.strip())
