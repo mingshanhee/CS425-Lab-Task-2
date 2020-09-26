@@ -158,7 +158,7 @@ class ProcessedQuestionWM:
     # Input:
     #       searchQuery(list) : List of tokens from buildSearchQuery method
     # Output:
-    #       qVector(dict) : Dictionary of words and their frequency
+    #       vector : An aggregated embbeding for the given searchQuery
     def getQueryVector(self, searchQuery):
         vector = np.zeros((100,))
         num_words = 0
@@ -170,7 +170,7 @@ class ProcessedQuestionWM:
 
         # TODO: Perform stopword removal, if the argument for stopword removal is set to True
             
-        # TODO: Add the corresponding word vector into "vector"
+        # TODO: Sum the word vectors into "vector"
 
         # TODO: If word vectors are added into "vector", divide the "vector" by the number of words
         # Else, return the word vector 

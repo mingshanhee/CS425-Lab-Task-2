@@ -76,9 +76,8 @@ class DocumentRetrievalModelWM:
     # Computes term-frequency inverse document frequency for every token of each
     # paragraph
     # Output:
-    #       paragraphInfo(dict): Dictionary for every paragraph with following 
-    #                            keys
-    #                               vector : dictionary of TFIDF for every word
+    #       paragraphVectors(dict): Dictionary for every paragraph with following keys
+    #                               vector : an aggregated embedding for each paragraph
     def computeEmbedding(self):
         self.paragraphVectors = []
 
@@ -92,7 +91,7 @@ class DocumentRetrievalModelWM:
             paraVector = np.zeros((100,))
             num_words = 0
 
-            # TODO: For each word and frequency in "wordFrequency", add the word vector(s) into "paraVector"
+            # TODO: For each word and frequency in "wordFrequency", sum the word vector(s) into "paraVector"
             # HINT: not all words are found in the Word2Vec model
                     
             # TODO: Currently, "paraVector" is a summation of all the word vectors found in Word2Vec model.
